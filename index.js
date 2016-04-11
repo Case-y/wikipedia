@@ -48,10 +48,16 @@ app.controller('MainCtrl', function($scope, $http, $timeout) {
     
     $http.jsonp(api + title + cb)
     .success(function(data) {
+      if (data.query == undefined) {
+        alert("h");
+        $scope.results.push({title: "No results.", body: "Please search again.", page: ""})
+      } else {
       var results = data.query.pages;
       angular.forEach(results, function(v,k)  {
         $scope.results.push({title: v.title, body: v.extract, page: page + v.pageid})
       })
+      }
+     
     });
   }
  
