@@ -49,7 +49,7 @@ app.controller('MainCtrl', function($scope, $http, $timeout) {
     $http.jsonp(api + title + cb)
     .success(function(data) {
       if (data.query == undefined) {
-        alert("h");
+        alert("Sorry, your result was invalid. :(");
         $scope.results.push({title: "No results.", body: "Please search again.", page: ""})
       } else {
       var results = data.query.pages;
