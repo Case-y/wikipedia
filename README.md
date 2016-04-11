@@ -2,4 +2,4 @@
 Generates Wikipedia Search Pages like Google!
 
 
--case-y.github.io/wikipedia
+# case-y.github.io/wikipedia
